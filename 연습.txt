@@ -1,0 +1,151 @@
+**
+rem과 em 의 차이 In CSS
+정확하게 px로 단위를 지정할 수 있는데, rem 과 em은 언제쓰면 유용한 것일 까?
+
+html의 최상위태그에서 px로 지정한 값을 1rem로 정의해서 만약
+```html
+<html style={{font-size: '1px', margin:'2rem', padding: '1.5rem'}}>
+에서 2rem은 2px을 뜻하고, 1.5rem은 1.5px을 뜻한다. 만약 최상위태그(최상위요소)의 px의 단위가 바뀌면 rem 또한 바뀐다. 해서 rem는 최상위요소를 기준으로 한 상대적인 값을 표현해주는 단위다.
+
+반면에 em는 rem와 같이 상대적인 값을 표현해주는 단위이지만 기준이 되는 값은 현재 스타일 지정 요소의 값을 의미합니다. 즉 가장가까운 px이 있는 px을 기준값으로 한다. 
+
+나 같은 초보는 조금은 절대적인(?), 가독성이 좋다고 생각되는 rem을 쓰는 것이 편할 것..
+
+
+**
+Cannot read property 'createElement' of undefined
+
+https://vesselsdiary.tistory.com/85
+
+
+es7을 viscose Extension에서 깔고 rfce을 치면, 리액트 컴포넌트구조가 자동완성 됌. Reactfunctionalcomponentes7의 약자임
+
+
+String.prototype.includes()
+문자열이 문장에 포함이 되어있는 가를 알려주는 메소드
+
+
+검색해볼 것
+difference between parseInt and parseFloat)
+
+
+indexOf()
+
+
+모르는 메소드 정리해놓을 것
+
+
+
+
+
+
+
+
+리액트와 노드로 영화 어플리케이션 만들기
+
+1. Boiler-plate
+: Boiler-plate를 사용하는 이유는 프로젝트의 중요한 부분을 더 집중하기 위해서
+John Ahn 유튜브채널가서 리액트 노드 더 추가로 공부하고 싶으면 공부할 것 (기초 노드 리액트)
+
+1) Boiler-plate 다운
+jaewonhimnae/boilerplate-mern-stack
+
+다음과 같은 주소로 가서 git clone 할 것(혹은 다운로드)
+
+2) Package.json에 있는 디펜던시들의 node를 받아야함 (server와 client 각각 해줘야함)
+-> npm install
+
+3) dev.js란 파일 생성
+-> server/config/key.js 개발 환경이 로컬에서 할 수 도 있고 디플로이한 이후에 프로덕션모드로 개발을 할 수가 있음, 어디서 개발하는지 변수를 정해주는 파일임. prod.js에 변수를 할당해 주는 듯.
+
+4)MongoDB 로그인
+->클러스터 만든 후 아이디 비번 생성 후 dev.js파일에 넣는다.
+->mongoDB랑 어플리케이션이랑 어떻게 연결을 할까?
+
+5)클러스터 만든 후 아이디 비번 생성 후 dev.js파일에 넣는다
+-> mongoDB랑 어플리케이션이랑 어떻게 연결을 할까?
+-> mongoDB에서 클러스터(구성? 모음? 단위? 화학 Like config)를 만든 후 아이디 비번 생성 후 dev.js파일에 
+
+```js
+// key.js
+if (process.env.NODE_ENV === 'production') {
+    module.exports = require('./prod');
+} else {
+    module.exports = require('./dev');
+}
+```
+
+이렇게 key.js에 export를 해서 prod에서 개발을 할건지 dev에서 개발을 할건지를 묻는 조건문을 보고
+
+dev.js에서
+
+```js
+// dev.js
+module.exports = {
+    mongoURI:'mongodb+srv://<username>:<password>@youtubeclone.w0sep.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+}
+```
+
+이제 다음과 같은 코드에 username과 password를 본인이 MongoDB의 DataBase Access란에서 새로운 유저로 가입한 정보를 입력해주면 이 어플리케이션이 mongoDB와 연결된다.
+
+
+2. The MovieDB API
+
+1) The MovieDB Website로 이동
+
+2) 가입 후 로그인 & API_KEY 받기 (MFC할때 WINDOWKEY값 받는 것처럼...?)
+-> API를 받을때 유효성검사도 해야함..
+API 키 (v3 auth)
+-> b82848eea42b88d40ae91e2376e23f1d
+
+3) Text Editor에서 the MovieDB API를 위한 설정
+Get Movie BY Latest (최근 영화목록을 가져올때는 이러한 URL주소)
+
+Get Movie Detail(디테일한 영화목록을 API를 통해 가져올때는 이러한 URL주소)
+
+Get Movie Reviews(...")	// 이거 spread 문법, rest parameter, 구조							// 분해 할당문법같다..
+
+Get Trending(...")
+						// 바퀴를 재발명하지 마라
+그렇다면 총 공통적인 URL..		// 추상화 사용자가 굳이 이런 URL PATH 를 
+API_URL은..!				// 알 필요가 없이 사용만 하면됨 
+-> https"//api.themoviedb.org/3/
+
+4) 이미지는 어떻게 가져오나?
+동일한 URL부분/이미지 사이즈/유니크한이미지이름
+
+-> API_URL 즉, '동일한 URL부분'상수처리할 것
+
+```js
+export 
+// 다른폴더안에서도 이 걸 쓸 수 있도록 해줌.
+```
+
+client/src/components/Config.js에다가
+```js
+export const API_URL = 'https://api.themoviedb.org/3/'
+export const IMAGE_BASE_URL = 'http://image.tmdb.org/t/p/'
+```
+를 적어 '동일한 URL 부분'을 상수처리해줌
+
+3. Landing Page
+1) 전체적인 Template을 간단하게 만들기
+LandingPage.js에 있는 LandingPage 컴포넌트를 만들어줌
+Api Key도 상수처리해줄것(사용하기 편하게..)
+페이징처리?가뭐지?
+
+2)Movie API에서 가져온 모든 데이터를 STATE에 넣기
+-> useEffect()를 사용
+-> fecth(response=>response.json()).then(console.log(response))
+-> 혹은 axios를 사용	(axios 엑시오스, 도끼란 뜻임)
+axios는 요청을 보낼 때 쉽게 보낼 수 있게 해주는 모듈
+Express Router는 서버로 오는 요청을 여러개의 해당 부분으로 나눠주는 역활
+
+?**? 서버쪽에서는 주로 router로 알맞은 핸들러로 요청을 보낸 후 그곳에서 만약 다른 서버에 요청을 다시 보내야 한다면 axios를 이용해서 요청을 보낼 수 있다?
+
+3)MainImage Component를 만들기
+
+4)Grid Card Component 만들기
+
+5)Load More Function 만들기
+

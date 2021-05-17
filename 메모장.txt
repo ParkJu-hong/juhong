@@ -1,0 +1,59 @@
+알고리즘 블로그는 대략 어떻게 쓰는지 한번 보자
+
+Arr.sort?
+숫자든 문자열이든 모두 문자열로 변환해서 유니코드로 앞에오는 숫자부터 정렬함
+그럼 객체일때는 어떻게 쓸까?
+
+Math.pow([제곱할대상], [제곱할횟수]);
+Math.sqrt([제곱근을 구할 대상(즉 루트를 씌울 숫자)])
+Math.ceil() : 소수점 올림, 정수 반환
+Math.floor() : 소수점 버림, 정수 반환
+Math.round() : 소수점 반올림, 정수 반환
+
+JS에서 거짓이 되는 값
+false
+null
+undefined
+0
+-0
+0n
+NaN
+""
+
+Boolean([어떤 Boolean 타입인지 확인하고 싶은 값]) 함수
+
+약수
+: 어떤 수나 식을 나누어 나머지가 없이 떨어지는 수나 식을 일컫는 말
+어떤 수를 나누어떨어지게 하는 수를 그 수의 약수라고 합니다.
+
+8을 1, 2, 4, 8,로 나누면 나누어떨어집니다.
+
+1, 2, 4, 8은 8의 약수입니다.
+
+소수 (에라토스테네스의 체)
+: 1과 자기 자신 외의 약수를 가지지 않는 1보다 큰 자연수
+
+parseInt(string, radix);
+String : 숫자로 변환할 문자열
+Radix: optional, string 문자열을 읽을 진법(수의 진법 체계의 진법), 2~36의 수
+
+function listPrimes(num){
+  let result = true;
+  let strResult = '2';
+  for(let i = 3; i <= num; i++){
+    for(let j = 2; j < i; j++){
+      // 일단 첫번째로 소수인지 아닌지를 걸러내는 코드가 필요
+      if(i % j === 0){
+        // 자기자신제외하고 나눠진다면 소수가 아니므로 문자열로 할당할 필요가 없음
+        result = false;
+      }
+      // 소수가 맞으면 리터럴템플릿으로 문자열변수에 할당해서 합칠 것
+    }
+    if(result){
+      strResult += `-${i}`
+    }else{
+      result = true;
+    }
+  }
+  return strResult;
+}

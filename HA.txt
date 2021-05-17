@@ -1,0 +1,262 @@
+5주간의 섹션을 돌아보는 회고 블로그를 작성해볼 것. (5월 5일 어린이날, 내일)
+어떤걸 배웠고, Today I Month, 
+개발자가 되기위해 어떤 노력을 했는지, 어떤 우여곡절을 겪었는지 보여줄 수 있는 건 블로그. 22주간 개발실력도 키우겠지만 남는 것은 블로그다.
+
+Hiring Assessment(진단, 평가)
+: 단순히 평가라고 생각하기보단 나의 5주간 학습한 학습상태를 진단할 수 있는 좋은 기회라고 생각할 것.
+
+1. Copilot
+2. React
+
+제출 기한 : Hiring Assessment 당일 오후 18시까지. 5시 45분쯤 알람맞춰서 제					출할 것
+제출 방식 : 
+1. 주어진 코플릿 문제를 해결하여 제출 5문제
+2. Im-ha-section-1 레포에 주어진 문제를 해결하여 제출
+
+동적으로 라우팅이 변경되는 부분.
+
+고차함수 메소드, 코플릿 학습
+
+
+:: 기수 이동 :: 
+모든 테스트케이스가 통과됐는지.
+코플릿문제가 다 완료됐는지.
+과제제출을 다 했는지.
+종합적으로 심사할 것
+출결..
+
+필요충분조건은 아니다.
+
+정신바짝차려야한다.
+
+하이퍼리얼?
+
+
+
+
+1.
+function test1(str) {
+  const arr = str.toLowerCase().split(' ');
+  let objTemp = {};
+  for(let i = 0; i < arr.length; i++){
+    // 객체형태로 키가 있는지 확인해서 없으면 ...
+    if(arr[i] === ''){
+      continue;
+    }
+    else if(objTemp[arr[i]] === undefined){
+      objTemp[arr[i]] = 0;
+    }
+    objTemp[arr[i]] += 1;
+  }
+
+  return objTemp;
+}
+
+2.
+function test2(num) {
+  const numToString = String(num);
+  const arrTemp = numToString.split('');
+  let result = 0;
+  for(let i = 0; i < arrTemp.length; i++){
+    if(arrTemp[i] === '-'){
+      arrTemp[i + 1] = arrTemp[i + 1] * (-1);
+      continue;
+    }
+    result += Number(arrTemp[i]);
+  }
+  return result;
+}
+
+3. function test3(num) {
+  const arrTemp = String(num).split('');
+  let result = 1;
+  let resultArr = [];
+  let resultArr2 = [];
+  let resultArr3 = [];
+  let arrTemp2 =[];
+  let arrTemp3 = [];
+  for(let i = 0; i < arrTemp.length; i += 1){
+    if(result < 10 && i > arrTemp.length - 1){
+      return result;
+    }
+    result *= Number(arrTemp[i]);
+  }
+
+  arrTemp2 = String(result).split('');
+  for(let i = 0; i < arrTemp2.length; i++){
+    resultArr.push(Number(arrTemp2[i]));
+  }
+
+  if(result > 10){
+    result = 1;
+    for(let i = 0; i < resultArr.length; i += 1){
+      if(result < 10 && i > resultArr.length - 1){
+        return result;
+      }
+      result *= resultArr[i]
+    }
+  }
+
+  arrTemp2 = String(result).split('');
+  for(let i = 0; i < arrTemp2.length; i++){
+    resultArr2.push(Number(arrTemp2[i]));
+  }
+
+  if(result > 10){
+    result = 1;
+    for(let i = 0; i < resultArr2.length; i += 1){
+      result *= resultArr2[i]
+    }
+  }
+
+  arrTemp3 = String(result).split('');
+  for(let i = 0; i < arrTemp2.length; i++){
+    resultArr2.push(Number(arrTemp2[i]));
+  }
+
+  if(result > 10){
+    result = 1;
+    for(let i = 0; i < resultArr3.length; i += 1){
+      result *= resultArr3[i]
+    }
+    if(result === 1){
+      return 0;
+    }
+  }
+
+  return result;
+}
+
+4.
+function printRole(user) {
+  // Joe Blow를 클릭하면 clerk 이
+  // Mary Jenkins를 클릭하면 manager 가 찍힙니다.
+  // 이 함수는 수정하지 마십시오.
+  console.log(user.role);
+}
+
+function test4(arr) {
+  let num = 100
+  for(let i =0; i < arr.length; i++){
+    let li = document.createElement('li');
+    let a = document.createElement('a');
+    a.classList.add('name');
+    // a.setAttribute('href', `javascript:void(0);`);
+    // a.setAttribute('onclick', `printRole(${arr})`);
+    a.textContent = `${arr[i].firstName} ${arr[i].lastName}`;
+    li.append(a);
+    let div = document.createElement('div');
+    div.classList.add('age')
+    div.textContent = `${arr[i].age}`;
+    li.append(div);
+    document.querySelector('#container').append(li);
+}
+}
+
+
+
+5.
+function test5(arr) {
+  let obj = {};
+  let objTemp = {};
+  let arrTemp = []; // 나중에 obj을 푸쉬해야됌
+  let arrTempSort = [];
+  let resultArr = [];
+
+
+
+  // arr를 객체로 만드는 코드
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i][0][0] === 'firstName' && arr[i][1][0] === 'lastName'){
+      obj['name'] = `${arr[i][0][1]} ${arr[i][1][1]}`
+      obj['age'] = arr[i][2][1];
+      objTemp = JSON.parse(JSON.stringify(obj));
+      arrTemp.push(objTemp);
+   }else{
+    obj['name'] = arr[i][0][1];         // 키값이 firstName이 됌.
+    obj['age'] = arr[i][1][1];   // 키값이 age가 됌.
+    objTemp = JSON.parse(JSON.stringify(obj));
+    arrTemp.push(objTemp);
+   }  
+  }
+  let temp = [];
+  for(let i = 0; i < arrTemp.length; i++){
+    for(let j = 1; j < arrTemp.lengthl j++){
+    if(arrTemp[i].age > arrTempSort[j].age){   
+      temp.push(arrTemp[i].name);
+    }else if()
+  }
+
+  for(let i = 0; i < arrTemp.length - 1; i++){
+  }
+
+  for(let i = 0; i < arrTemp.length; i++){
+    resultArr.push(arrTemp[i].name);
+  }
+  
+  return resultArr;
+}  
+
+
+// 오름차순 알고리즘
+// arrTemp.push(arr[i][1])
+// 객체를 요소로 가진 배열 , 그 객체를 필터로 사용
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { useState } from "react";
+import images from "../data/images"; // 제공되는 이미지를 이용하세요
+import Thumbnail from '../component/Thumbnail';
+
+function Gallery() {
+  // console.log(images) // npm start를 통해 앱을 열어, 개발자 콘솔을 통해 이미지 목록을 확인할 수 있습니다
+  const [main, setMain] = useState(images[0].src);
+  
+
+  const handleClick = (image) => {
+    // TIP: parameter로 이미지가 전달어야 하며, 이벤트 객체는 쓰지 않습니다
+    // TODO
+    // const newImage = JSON.parse(JSON.stringify(image));
+    // const newImage = image;
+    console.log('image type : ',typeof image);
+    console.log('image',image);
+    console.log('image.target',image.target);
+    // console.log('newImage type : ', typeof newImage);
+
+    setMain(image.target.src);
+  }
+
+  return <div>
+    <h2>제목</h2>
+    <div id="list" className="flex">
+      {images.map((el) => <a href="" onClick={handleClick} key={el.id}><Thumbnail source={el}/></a>)}
+    </div>
+
+    <div>
+      {/* TODO: 아래 하드코딩된 내용 대신에, 목록 선택에 따른 이미지를 표시하세요 */}
+      <h2>{}</h2>
+      <img src={main} id="current-image" />
+    </div>
+  </div>
+}
+
+export default Gallery;
+
+
+
+
+무선키보드는 현재 키크론이 맥북이시면 좋을 것 같아요
+마우스는 로지텍 m331 사용중인데 무소음이고 좋아요!

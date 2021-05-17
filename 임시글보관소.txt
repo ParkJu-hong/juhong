@@ -1,0 +1,303 @@
+<Router> 가 아니고 <Route>
+
+<Link>를 안써줘도 {Link}를 import해줘야함
+
+이벤트핸들러쓸때 {} 중괄호로 감싸줄것 ""가 아니고, 
+Ex)
+onChange={handleChangeMsg}
+onClick={handleButtonClick}
+
+맞춤법잘확인할것, 비주얼스튜디오에서 약간 검은색글씨가 나오면,,, 의심해볼 것
+
+console.log(filteredtweets) 
+
+왜 시멘틱 엘리먼트라고 불리우는가?
+
+dropdown
+:<select>, <option>으로 트윗 작성한 사용자를 조회할 수 있도록 구현
+
+왜 const handleChangeUser = (e) => {}로 했을 때 안됐을까?
+handleUser로 바꾸니까 바로됌.. 왤까?
+
+  const options = tweet.filter((el) => el.username).map((el) => <option value={el}>{el}</option>)
+이렇게 id값이 없을 경우 어떻게 해야할까>?
+
+
+data:text/html, <html contenteditable>
+
+
+레퍼런스코드에서
+{tweets.reduce((acc, cur) => {
+            const isNotUnique = acc.reduce((a, c) => {
+              if (c.username === cur.username) {
+                return true
+              }
+              return a === true ? true : false
+            }, false)
+
+
+왜 reduce를 해주는 건지도 모르겠고,, 하여튼 그렇다
+
+
+결론적으로 보자면 
+fetch를 이용하면 데이터 가져오는 과정에서 .json() 메소드를 한번 더 이용해야 되서 번거로우며 
+에러 핸들링 하는 부분도 다르게 해줘야 합니다. 
+
+둘다 데이터를 가져오는 것이지만 axios 가 훨씬 편하기에 axios를 쓰는것을 추천해드립니다.
+
+
+
+
+
+
+
+
+
+
+코드스테이츠 수강생 여러분 안녕하세요 ! 코스 운영 매니저 김형찬입니다. 
+많은 수강생분들께서 코스를 진행하며 블로깅에 힘 써주고 계실 텐데요, 
+
+블로깅 시에 유어클래스의 콘텐츠, 코드를 그대로 복사 + 붙여넣기 함에 따라 후배 수강생 분들에게 잠재적으로 피해를 줄 수 있는 상황이 확인되고 있습니다. 
+블로깅은 여러분의 언어로 정리해야만 의미가 있습니다. 그렇지 않을 경우 MDN을 단순 복사 붙여넣기 하는 것과 크게 차이가 없습니다. 
+
+특히 HA(Hiring Assessment)의 경우 후배 수강생들에게 치명적인 악영향을 끼칠 수 있는 만큼, 관련 블로깅, 혹은 커뮤니티에 업로드한 질문, Fiddle 등에서 발견될 경우 엄격한 조치를 취할 수 있습니다. 
+따라서 실수로 업로드해 주신 분들은 수정 부탁드리구요, 앞으로 콘텐츠 활용하실 때 주의해 주시기 바랍니다. :smile: 
+
+코딩하기 좋은 날입니다! 즐코하세요
+
+
+
+
+
+기록하는 습관이 생겼다면, Achievement Goals을 이용해보세요
+
+과제를 진행하면서 마주하는 에러 코드 자체를 기록해보세요
+: 과제를 수행하시면서 매일 같이 만나는 에러 메시지, 터미널 에러 코드를 블로그 소재로 활용 할 수 있습니다. 현업에서 주니어 개발자에게 요구하는 문제를 파악하고 스스로 해결 할 수 있는 역량을 증명 할 수 있는 중요한 여러분만의 컨텐츠가 될 것입니다.
+
+TIL 예시 블로그주소 https://dddoublek.github.io/TIL/
+: TIL 블로그는 코스를 수강하면서 가장 꾸준하게 작성하기 좋은 블로그 포스트입니다. 단순하게 오늘 공부한 내용을 나열식으로 기록해보기도 하고, 하나의 개념에 대해서 기술 블로그 형식으로 블로그를 작성해도 좋습니다. TIL 형식의 블로그에서 가장 중요한 것은 꾸준한 작성과 자신의 학습 상태를 파악하는 것입니다.
+
+TIL 자체를 길게 또는 개념적으로 자세하게 작성하는 것은 중요하지 않습니다. 스스로가 이해한 내용을 자신만의 언어로 다른 사람에게 설명하듯이 작성해보시는 것을 추천드립니다. 아래의 예시 블로그를 참고하면 TIL 블로그 작성 팁을 얻을 수 있습니다.
+
+
+** 
+시간을 효율적으로 사용하는 습관을 몸에 배도록해야한다.
+HA시험때 똑같은 로직을 두고 어떻게 해야할지 고민하는 경우 1~2시간을 잡아먹는 게 기본이였는데, 똑같은 방법으로 고민만 할바에 검색과 질문, 또한 다른방법으로 체계적으로 계속시도를 해보는 것이 중요하다고 생각이 들었다.
+
+자바스크립트 불변성
+https://sustainable-dev.tistory.com/156
+
+내가 이해한 불변성
+원시타입으로는 Boolean, String, Number, Null, undefined, Symbol이 있다. 이 원시타입은 불변한다. 불변하는 말은 불변하는 데이터타입에 값을 할당할때 같은 데이터주소가 아닌 아예 새로운 주소를 할당해야한다는 말이다. 불변하는 원시타입은. 메모리영역 안에서 변경이 불가능하며 변수에 할당할 때 완전히 새로운 값이 만들어져 재할당된다.
+
+예를들어 let name = 'name' 은 'name'이라는 string타입에 새로운 데이터의 주소를 참조해서 name에 할당한다. 즉 name이란 let으로 선언된 변수는 'name'과의 같은 주소를 가지고 있다. 
+
+const obj = {
+	name: 'City',
+	city: 'seoul';
+}
+
+// 에러나는 코드
+obj = {
+	name: 'Juhong',
+	city: 'jeju';
+}
+
+왜 에러가 날까?
+const는 새로운 주소를 받지 못한다. 즉 방금은 obj와 다른 주소를 가지는 객체를 할당해서 오류가 발생한다. 하지만 const로 함수, 객체, 배열은 같은 메모리영역에서 새로운 값을 변경할 수 있다. 해서 만약 다음과 같은 의미로 값을 재할당하고 싶다면 작동되는 코드는 이러하다.
+
+```js
+obj.name = 'Juhong';
+obj.city = ''jeju';
+```
+
+또한 const로 선언된 원시타입 변수가 왜 값이 재할당되지 않는지 이 글을 다시보고있는 '나'혹은 다른 분들도 생각해보면 좋을 것 같다...
+
+
+
+Side effects란?
+
+React Developer Tools을 크롬에서 다운로드함.
+
+브라우저에서는 node.js기반의 익스프레스 모듈을 인식하지 못한다?
+TypeError: Cannot read property 'prototype' of undefined
+npm install express-session --save로 express-session을 설치해줌. --save
+
+HEIC를 pnp으로
+
+
+
+
+아   맞습니다 ^^  
+
+하지만 현재 client 부분에서는 중요한 정보를 보관하고 있진 않아서 
+
+gitignore 파일안에    Config.js를 넣어주진 않았는데요 
+
+그래도 넣고 싶으시다면  .gitignore 파일 안에 해당 파일 이름을 넣어주시면 됩니다 !!~!! 
+
+*  .gitignore 파일 안에 파일을 이름을 넣으면 그 파일이 안보이거나 그런 효과가 있는 것 같다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+리액트와 노드로 영화 어플리케이션 만들기
+
+1. Boiler-plate
+: Boiler-plate를 사용하는 이유는 프로젝트의 중요한 부분을 더 집중하기 위해서
+John Ahn 유튜브채널가서 리액트 노드 더 추가로 공부하고 싶으면 공부할 것 (기초 노드 리액트)
+
+1) Boiler-plate 다운
+jaewonhimnae/boilerplate-mern-stack
+
+다음과 같은 주소로 가서 git clone 할 것(혹은 다운로드)
+
+2) Package.json에 있는 디펜던시들의 node를 받아야함 (server와 client 각각 해줘야함)
+-> npm install
+
+3) dev.js란 파일 생성
+-> server/config/key.js 개발 환경이 로컬에서 할 수 도 있고 디플로이한 이후에 프로덕션모드로 개발을 할 수가 있음, 어디서 개발하는지 변수를 정해주는 파일임. prod.js에 변수를 할당해 주는 듯.
+
+4)MongoDB 로그인
+->클러스터 만든 후 아이디 비번 생성 후 dev.js파일에 넣는다.
+->mongoDB랑 어플리케이션이랑 어떻게 연결을 할까?
+
+5)클러스터 만든 후 아이디 비번 생성 후 dev.js파일에 넣는다
+-> mongoDB랑 어플리케이션이랑 어떻게 연결을 할까?
+-> mongoDB에서 클러스터(구성? 모음? 단위? 화학 Like config)를 만든 후 아이디 비번 생성 후 dev.js파일에 
+
+```js
+// key.js
+if (process.env.NODE_ENV === 'production') {
+    module.exports = require('./prod');
+} else {
+    module.exports = require('./dev');
+}
+```
+
+이렇게 key.js에 export를 해서 prod에서 개발을 할건지 dev에서 개발을 할건지를 묻는 조건문을 보고
+
+dev.js에서
+
+```js
+// dev.js
+module.exports = {
+    mongoURI:'mongodb+srv://<username>:<password>@youtubeclone.w0sep.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+}
+```
+
+이제 다음과 같은 코드에 username과 password를 본인이 MongoDB의 DataBase Access란에서 새로운 유저로 가입한 정보를 입력해주면 이 어플리케이션이 mongoDB와 연결된다.
+
+
+
+2. The MovieDB API
+
+1) The MovieDB Website로 이동
+
+2) 가입 후 로그인 & API_KEY 받기 (MFC할때 WINDOWKEY값 받는 것처럼...?)
+-> API를 받을때 유효성검사도 해야함..
+API 키 (v3 auth)
+-> b82848eea42b88d40ae91e2376e23f1d
+3) Text Editor에서 the MovieDB API를 위한 설정
+Get Movie BY Latest (최근 영화목록을 가져올때는 이러한 URL주소)
+
+Get Movie Detail(디테일한 영화목록을 API를 통해 가져올때는 이러한 URL주소)
+
+Get Movie Reviews(...")	// 이거 spread 문법, rest parameter, 구조							// 분해 할당문법같다..
+
+Get Trending(...")
+						// 바퀴를 재발명하지 마라
+그렇다면 총 공통적인 URL..		// 추상화 사용자가 굳이 이런 URL PATH 를 
+API_URL은..!				// 알 필요가 없이 사용만 하면됨 
+-> https"//api.themoviedb.org/3/
+
+
+4) 이미지는 어떻게 가져오나?
+동일한 URL부분/이미지 사이즈/유니크한이미지이름
+
+-> API_URL 즉, '동일한 URL부분'상수처리할 것
+
+```js
+export
+// 다른폴더안에서도 이 걸 쓸 수 있도록 해줌.
+```
+
+client/src/components/Config.js에다가
+```js
+export const API_URL = 'https://api.themoviedb.org/3/'
+export const IMAGE_BASE_URL = 'http://image.tmdb.org/t/p/'
+```
+를 적어 '동일한 URL 부분'을 상수처리해줌
+
+
+
+3. Landing Page
+1) 전체적인 Template을 간단하게 만들기
+LandingPage.js에 있는 LandingPage 컴포넌트를 만들어줌
+Api Key도 상수처리해줄것(사용하기 편하게..)
+페이징처리?가뭐지?
+
+2)Movie API에서 가져온 모든 데이터를 STATE에 넣기
+-> useEffect()를 사용
+
+
+3)MainImage Component를 만들기
+
+4)Grid Card Component 만들기
+
+5)Load More Function 만들기
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
