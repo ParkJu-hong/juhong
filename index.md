@@ -27,7 +27,7 @@ layout: default
 
 ## 포토그래퍼 포트폴리오용 홈페이지
 
-![Image]('img/ongin1.png')
+![Image]('./img/ongin1.png')
 
 ### [https://ongin-eight.vercel.app/](https://ongin-eight.vercel.app/)
 ### Git Repository => [https://github.com/bejeju/Contradiction](https://github.com/bejeju/Contradiction)
@@ -51,8 +51,8 @@ Front을 구현했습니다. 또한 현재 node.js MySQL, Sequelize, multer, aws
 
 ## 폐기물사업장 홈페이지 (개발 중)
 
-![Image]('ian1.png')
-![Image]('ian2.png')
+![Image]('./ian1.png')
+![Image]('./ian2.png')
 
 ### Git Repository => [https://github.com/bejeju/ian](https://github.com/bejeju/ian)
 
