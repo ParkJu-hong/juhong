@@ -13,15 +13,16 @@ layout: default
 #### Javascript
 #### HTML 5 / CSS (Web Standard & Browsing)
 #### React.js
-#### // 매력적인 것 쓸 것
 
 ## DataBases
 #### MySQL
 #### Sequelize
 #### MongoDB
 
+
+
 # Projects
-// 프로젝트에서 Experience와 문제해결한 것 프로젝트를 하면서의 경험
+
 ## 포토그래퍼 포트폴리오용 홈페이지
 ### https://ongin-eight.vercel.app/
 ### Git Repository => https://github.com/bejeju/Contradiction
@@ -40,6 +41,8 @@ Front을 구현했습니다. 또한 현재 node.js MySQL, Sequelize, multer, aws
 공식문서에서 발견하고 문제를 해결했던 적이 있습니다.
 
 이렇듯 질문을 하면서 추상적이였던 문제가 객관화가 되어가고, 공식문서를 읽는 습관을 가지게 되었습니다.
+
+
 
 ## 폐기물사업장 홈페이지 (개발 중)
 ### Git Repository => https://github.com/bejeju/ian
