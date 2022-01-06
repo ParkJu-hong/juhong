@@ -3,16 +3,17 @@ layout: default
 ---
 
 # Skills
-## Back-End Skills
+
+## Front-End
+#### Javascript
+#### HTML 5 / CSS (Web Standard & Browsing)
+#### React.js
+
+## Back-End
 #### node.js
 #### RESTful API design
 #### Git, GitHub
 #### AWS
-
-## Front-End Skills
-#### Javascript
-#### HTML 5 / CSS (Web Standard & Browsing)
-#### React.js
 
 ## DataBases
 #### MySQL
@@ -20,12 +21,16 @@ layout: default
 #### MongoDB
 
 
+<hr>
 
 # Projects
 
 ## 포토그래퍼 포트폴리오용 홈페이지
-### https://ongin-eight.vercel.app/
-### Git Repository => https://github.com/bejeju/Contradiction
+
+[Image]('./assets/img/project1.gif')
+
+### [https://ongin-eight.vercel.app/](https://ongin-eight.vercel.app/)
+### Git Repository => [https://github.com/bejeju/Contradiction](https://github.com/bejeju/Contradiction)
 
 React, React-Router-Dom, React-Redux, React-Responsive, React-Motion, Styled-Components 등으로
 Front을 구현했습니다. 또한 현재 node.js MySQL, Sequelize, multer, aws-sdk 와 같은 라이브러리 등으로 백엔드를
@@ -42,14 +47,19 @@ Front을 구현했습니다. 또한 현재 node.js MySQL, Sequelize, multer, aws
 
 이렇듯 질문을 하면서 추상적이였던 문제가 객관화가 되어가고, 공식문서를 읽는 습관을 가지게 되었습니다.
 
-
+<br>
 
 ## 폐기물사업장 홈페이지 (개발 중)
-### Git Repository => https://github.com/bejeju/ian
+
+[Image]('./assets/img/ian1.png')
+[Image]('./assets/img/ian2.png')
+
+### Git Repository => [https://github.com/bejeju/ian](https://github.com/bejeju/ian)
 
 위의 스택과 마찬가지로 구현 중에 있습니다. AWS CRUD와 클라이언트 간의 구현이 까다롭지만 프로젝트를 하며 배우는 즐거움으로
 커밋을 하고 있습니다.
 
+<hr>
 
 # Education
 ### 코드스테이츠 중퇴
