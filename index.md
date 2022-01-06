@@ -2,6 +2,13 @@
 layout: default
 ---
 
+# [https://velog.io/@juho00ng](https://velog.io/@juho00ng)
+# [https://github.com/bejeju](https://github.com/bejeju)
+
+<br>
+<br>
+<hr>
+
 # Skills
 
 ## Front-End
