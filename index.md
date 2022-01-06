@@ -22,6 +22,5 @@ MongoDB
 
 # Projects
 // 프로젝트에서 Experience와 문제해결한 것 프로젝트를 하면서의 경험
-<img src="./assets/img/project1.gif"><img>
 
 # Education
