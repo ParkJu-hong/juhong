@@ -14,11 +14,11 @@ layout: default
 ## Front-End
 #### Javascript
 #### HTML 5 / CSS (Web Standard & Browsing)
-#### React.js
+#### React
 
 ## Back-End
 #### node.js
-#### RESTful API design
+#### RESTful API
 #### Git, GitHub
 #### AWS
 
@@ -38,8 +38,8 @@ layout: default
 ### Git Repository => [https://github.com/bejeju/Contradiction](https://github.com/bejeju/Contradiction)
 
 React, React-Router-Dom, React-Redux, React-Responsive, React-Motion, Styled-Components 등으로
-Front을 구현했습니다. 또한 현재 node.js MySQL, Sequelize, multer, aws-sdk 와 같은 라이브러리 등으로 백엔드를
-구현 중입니다. 현재는 vercel을 사용해 배포 중이지만, 향후 백엔드가 구현된다면 AWS로 배포 할 수 있도록 기능 구현하고 있습니다.
+Front을 구현했습니다. 또한 node.js MySQL, Sequelize, multer, aws-sdk 와 같은 라이브러리 등으로 백엔드를
+구현 했습니다. 
 혼자 풀스택으로 웹을 처음부터 개발함으로 인하여, 전체적인 웹 개발을 조금이나마 이해할 수 있는 경험이었습니다.
 
 또한 1인 개발을 하면서 객관적으로 필요한 기술이 무엇인지 인지하고 인지한 토대로 공식문서를 보고 적용을 하려고 노력하였습니다.
