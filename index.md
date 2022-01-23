@@ -13,19 +13,20 @@ layout: default
 
 ## Front-End
 #### Javascript
-#### HTML 5 / CSS (Web Standard & Browsing)
+#### HTML 5 / CSS
 #### React
 
 ## Back-End
-#### node.js
+#### Node.js
 #### RESTful API
 #### Git, GitHub
+#### FireBase
 #### AWS
 
 ## DataBases
 #### MySQL
 #### Sequelize
-#### MongoDB
+#### MongoDB CLI
 
 
 <hr>
@@ -39,7 +40,7 @@ layout: default
 
 React, React-Router-Dom, React-Redux, React-Responsive, React-Motion, Styled-Components 등으로
 Front을 구현했습니다. 또한 node.js MySQL, Sequelize, multer, aws-sdk 와 같은 라이브러리 등으로 백엔드를
-구현 했습니다. 
+구현 했습니다.
 혼자 풀스택으로 웹을 처음부터 개발함으로 인하여, 전체적인 웹 개발을 조금이나마 이해할 수 있는 경험이었습니다.
 
 또한 1인 개발을 하면서 객관적으로 필요한 기술이 무엇인지 인지하고 인지한 토대로 공식문서를 보고 적용을 하려고 노력하였습니다.
@@ -51,6 +52,17 @@ Front을 구현했습니다. 또한 node.js MySQL, Sequelize, multer, aws-sdk �
 공식문서에서 발견하고 문제를 해결했던 적이 있습니다.
 
 이렇듯 질문을 하면서 추상적이었던 문제가 객관화가 되어가고, 공식문서를 읽는 습관을 지니게 되었습니다.
+
+<br>
+
+## 9qfm(9 Questions For Me)
+
+### Git Repository => [https://github.com/bejeju/questionforme](https://github.com/bejeju/questionforme)
+### Homepage => [https://bejeju.github.io/questionforme/](https://bejeju.github.io/questionforme/)
+
+자신과 마주하기 바쁜 시간, 자기 자신과 대화할 수 있는 시간을 가질 수 있도록 도와주는 웹입니다.
+9가지 질문의 대한 답을 FireBase API를 사용해 백엔드를 대신하였습니다.
+
 
 <br>
 
