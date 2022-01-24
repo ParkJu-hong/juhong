@@ -35,7 +35,7 @@ layout: default
 
 ## 포토그래퍼 포트폴리오용 홈페이지
 
-### [https://ongin-eight.vercel.app/](https://ongin-eight.vercel.app/)
+### [https://bejeju.github.io/ongin/](https://bejeju.github.io/ongin/)
 ### Git Repository => [https://github.com/bejeju/Contradiction](https://github.com/bejeju/Contradiction)
 
 React, React-Router-Dom, React-Redux, React-Responsive, React-Motion, Styled-Components 등으로
